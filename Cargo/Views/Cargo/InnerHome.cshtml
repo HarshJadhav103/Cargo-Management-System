@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Cargo.User_Cargo_Request>
+
+@{
+    ViewBag.Title = "InnerHome";
+    Layout = "~/Views/Cargo/Inner_LayoutPage.cshtml";
+}
+
+
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.WorkCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FromLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryDate)
+
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FromLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveryDate)
+        </td>
+      
+        <td>
+            @Html.ActionLink("View_Item", "User_Cargo_Request_Item", new { id=item.RequestId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RequestId }) |
+            @Html.ActionLink("Give Quotation", "Add_Quotation", new { id=item.RequestId })|
+            @Html.ActionLink("Status", "View_Quotation", new { id = item.RequestId })
+
+
+        </td>
+    </tr>
+}
+
+</table>

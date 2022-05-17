@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a1cad37c6e314628a1f6236cb850d162" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="Database1Model.Cargo_Detail" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.User_Cargo_Request" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.User_Cargo_Request_Item" Width="1.5" PointX="3.375" PointY="5.75" />
+        <EntityTypeShape EntityType="Database1Model.Quotation" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="Database1Model.Payment" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Database1Model.Feedback" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Cargo.Models.User_Cargo>
+
+@{
+    ViewBag.Title = "View_Request";
+    Layout = "~/Views/User/Inner_LayoutPage.cshtml";
+}
+
+<div style="overflow-x:auto;width:1300px">
+
+    <table class="table">
+        <tr>
+          @*  <th>
+                Html.DisplayFor(model => model.RequestId)
+                RequestID
+            </th>*@
+            <th>
+                @*@Html.DisplayNameFor(model => model.CargoId)*@
+                Company Name
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.WorkCategory)*@
+                Work Category
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.FromLocation)*@
+                From Locations
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ToLocation)*@
+                To Location
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.RequestDate)*@
+                Request Date
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DeliveryDate)*@
+                Delivery Date
+            </th>
+            @*<th>
+                    Html.DisplayNameFor(model => model.Description)
+                    Description
+                </th>*@
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.RequestId)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkCategory)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FromLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequestDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeliveryDate)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>*@
+                <td>
+                    @Html.ActionLink("Add_Item", "Add_Item", new { id = item.RequestId }) |
+                    @Html.ActionLink("View_Item", "View_Item", new { id = item.RequestId }) |
+                    @*   @Html.ActionLink("View_Estimate", "View_Estimate", new { id = item.RequestId }) *@
+                    @Html.ActionLink("View Quotation", "View_Quotation", new { id = item.RequestId })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

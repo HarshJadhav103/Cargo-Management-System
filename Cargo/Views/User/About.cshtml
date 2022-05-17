@@ -1,0 +1,393 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/User/Outer_LayoutPage.cshtml";
+}
+
+<h2>About Us</h2>
+<hr />
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.partcatalog.com/media/css_secure/30535d2e8f5e3a703bf0ce19dc2944ca.css" media="all" />
+    <script type="text/javascript" src="https://cdn.partcatalog.com/media/js/e91e0af47a3da829254d09e04e894898.js" data-group="core"></script>
+    <script type="text/javascript" src="https://cdn.partcatalog.com/media/js/53600961495e9dcdfa3992b8d7145e18.js"></script>
+    <script type="text/javascript" src="https://cdn.partcatalog.com/media/js/984708bc4f82f132c216a936742c1dc7.js" data-group="ccSelect"></script>
+    <script type="text/javascript" src="https://cdn.partcatalog.com/media/js/c5066d511bff6fb638c3ae7edfcd8ebc.js" data-group="lazy"></script>
+    <link rel="canonical" href="https://www.partcatalog.com/about-us" />
+    <title>About Us | PartCatalog.com - truck, car &amp; suv parts and accessories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="We are an interior and exterior car part and accessories store online! Browse our site for the highest quality car parts for your vehicle!" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <link rel="icon" href="https://cdn.partcatalog.com/skin/frontend/partcatalognew/default/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://cdn.partcatalog.com/skin/frontend/partcatalognew/default/favicon.ico" type="image/x-icon" />
+    <link rel="publisher" href="https://plus.google.com/+PartCatalog/" />
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Exo:400,300italic,700' rel='stylesheet' type='text/css'> -->
+    <!--[if lt IE 7]>
+    <script type="text/javascript">
+    //<![CDATA[
+        var BLANK_URL = 'https://cdn.partcatalog.com/js/blank.html';
+        var BLANK_IMG = 'https://cdn.partcatalog.com/js/spacer.gif';
+    //]]>
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["HK","IE","MO","PA"];
+//]]>
+    </script>
+    <!-- Gene_Braintree (Mi4yLjE=) -->
+    <script src="https://js.braintreegateway.com/web/3.16.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.16.0/js/hosted-fields.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.16.0/js/three-d-secure.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.16.0/js/paypal.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.16.0/js/data-collector.min.js"></script>
+    <script src="https://cdn.partcatalog.com/js/gene/braintree/2.2.1/vzero-min.js?v=1503271271"></script>
+    <script src="https://cdn.partcatalog.com/js/gene/braintree/2.2.1/vzero-paypal-min.js?v=1503271271"></script>
+    <script src="https://cdn.partcatalog.com/js/gene/braintree/2.2.1/vzero-integration-min.js?v=1503271271"></script>
+    <script src="https://cdn.partcatalog.com/js/gene/braintree/2.2.1/express/abstract-min.js?v=1503271274"></script>
+    <script src="https://cdn.partcatalog.com/js/gene/braintree/2.2.1/express/paypal-min.js?v=1503271274"></script>
+    <script>function myInit(){ StampedFn.init({ apiKey: 'pubkey-3pbIE0C4JXQE86a34jWxpJg66ffLH5', storeUrl: 'www.partcatalog.com' }); } </script>
+    <script async onload="myInit()" type="text/javascript" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn-stamped-io.azureedge.net/files/widget.min.css">
+    <script type="text/javascript">
+//<![CDATA[
+        var Translator = new Translate([]);
+        //]]></script>
+    <style type="text/css">
+        .product-category-header img {
+            float: left;
+            max-height: 140px;
+        }
+
+        .col-inner {
+            width: 30%;
+        }
+
+        screen and (max-width: 769px) {
+            .product-category-header img;
+
+        {
+            float: none;
+        }
+
+        }
+
+        screen and (max-width: 769px) {
+            .product-category-header img;
+
+        {
+            float: none;
+        }
+
+        .seal-wrapper {
+            display: none;
+        }
+
+        }
+    </style>
+</head>
+<body class=" cms-page-view cms-about-us">
+    <script type="text/javascript">
+window.ecomdevVarnishScope = function (action) {
+    if (!window.EcomDev || !EcomDev.Varnish) {
+        setTimeout(
+            function () { window.ecomdevVarnishScope(action); },
+            5
+        );
+    } else {
+        action();
+    }
+};
+
+window.currentPage = {"handle":"cms_page_view"};
+
+ecomdevVarnishScope(function () {
+    EcomDev.Varnish.AjaxBlock.url = "https:\/\/www.partcatalog.com\/varnish\/ajax\/reload\/";
+});
+    </script>
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-T2VJND" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+                            dataLayer = [{"customerLoggedIn":0,"customerId":0,"customerGroupId":"0","customerGroupCode":"NOT LOGGED IN","ecommerce":{"currencyCode":"USD"},"pageType":"cms\/page\/view"}];
+                                   (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T2VJND');
+    </script>
+    <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
+                    You must have JavaScript enabled in your browser to utilize the functionality of this website.
+                </p>
+            </div>
+        </div>
+    </noscript>
+
+
+    <header>
+
+        <script type="text/javascript">
+    // Update topmenu
+    (function () {
+        var currentLocation = window.location.pathname;
+        var $link = jQuery('a[href="' + currentLocation + '"]');
+        $link.closest('.main-cat-item').children('a').css('font-weight', 'bold');
+    })();
+
+    /* Show / hide amount of items placed in cart */
+    jQuery(function ($) {
+        var $bubble = $(".mini-cart-bubble-block"),
+            $cartQtyHeader = parseInt($bubble.find(".mini-cart-qty").text()),
+            $cartEmpty = $(".thm_head_basket .cart-empty"),
+            $cartProd = $(".thm_head_basket .cart-product");
+
+        if ($cartQtyHeader == 0) {
+            $bubble.hide();
+        } else {
+            $bubble.show();
+            $cartEmpty.hide();
+            $cartProd.show();
+        }
+
+        //fix main navigation opening on mobile device
+        var $navigation  = $('.js-navigation');
+        var $category = $navigation.find('.main-cat-item > a');
+
+        $category.on('click', function(e) {
+            if(!!('ontouchstart' in window)){ //check for touch device
+                e.preventDefault();
+                var $submenu = $(this).siblings('.dropdown1');
+
+                $(this).parent().siblings('.main-cat-item').each(function() {
+                    $(this).find('.hover-ul').removeClass('hover-ul'); //hide others menu
+                });
+
+                if($submenu.hasClass('hover-ul')) {
+                    $submenu.toggleClass('no-hover-ul');
+                } else {
+                    $submenu.toggleClass('hover-ul');
+                }
+            }
+        });
+
+        //fix search
+        var $search = $('.js-topsearch');
+        if(screen.width < 769) {
+            $search.addClass('thm_head_form_mobile');
+            $search.removeClass('thm_head_form_desktop');
+            $search.insertBefore('.js-topsearch-helper');
+        } else {
+            $search.addClass('thm_head_form_desktop');
+        }
+        $(window).resize(function() {
+        	var w = window.innerWidth;
+        	if (w>769) {
+        		$('#menu-main-mini').attr('style','display:none;');
+        	}
+        });
+    });
+        </script>
+
+
+
+
+        <div id="thm_content_text" class="thm_w_stretchy">
+            <div class="box-messages">
+                <div id="messages5ca38839c3e48"></div>
+                <script type="text/javascript"> ecomdevVarnishScope(function () {new EcomDev.Varnish.Messages("messages5ca38839c3e48", "https:\/\/www.partcatalog.com\/varnish\/ajax\/message\/", ["core","catalog","checkout","customer"], "varnish_messages", {"path":"\/","domain":"www.partcatalog.com"})})</script>
+            </div>
+            <div class="thm_breadcrumps">
+
+            </div>
+            <div class="std">
+                <div id="messages5ca38839c4404"></div>
+                <script type="text/javascript"> ecomdevVarnishScope(function () {new EcomDev.Varnish.Messages("messages5ca38839c4404", "https:\/\/www.partcatalog.com\/varnish\/ajax\/message\/", ["core","catalog","checkout","customer"], "varnish_messages", {"path":"\/","domain":"www.partcatalog.com"})})</script><div id="thm_brandguide_text">
+                    <div class="thm_brands_covers">
+
+
+
+                        <div class="thm_brand_covers thm_brand_covers_header">
+                            <div class="thm_brand_covers_img"><img src="https://cdn.partcatalog.com/media//images/bg-texas-grouped.png" alt="Located Deep in the Heart of Texas" /></div>
+                            <div class="thm_brand_covers_desc">
+                                <h3>Located Deep in the Heart of People</h3>
+                                <p>We&rsquo;re situated in the Ahmedabad, Gujarat the greatest state in the India. &ndash; Okay, maybe we&rsquo;re a little biased, but our location also means we're up early for the East Coast and stay late for the South Coast, giving virtually everyone in the World the answers and service they need in wicked fast time.</p>
+                                @*  <p>A bustling tech center, Austin, TX is also the home of Willie Nelson, the Congress Ave Bat Colony, the late Stevie Ray Vaughan, and the best breakfast tacos you'll find.</p>*@
+                            </div>
+                        </div>
+
+                        <div class="inner_main_agile_section">
+                            <div class="container">
+
+                                <div class="agile_inner_grids">
+                                    <h2>We&rsquo;re Here When You Need Us</h2>
+                                    <hr />
+                                    <div class="col-md-6 w3_agileits_about_grid_left">
+                                        <div class="thm_brand_covers_img"><img src="https://www.partcatalog.com/media/images/here-when-you-need-us.jpg" alt="We're Here When You Need Us" /></div>
+
+
+                                    </div>
+                                    <div class="col-md-6 w3_agileits_about_grid_right">
+                                        <p>No matter what you need and no matter the hour, feel free to contact us and we&rsquo;ll be happy to respond back within 1 business day. Realistically, you will probably get a response back within a few minutes if it&rsquo;s during business hours. If, for the rare reason you need warranty support, we&rsquo;ll be more than happy to help coordinate with the manufacturer. Feel free to contact us with any warranty support and we&rsquo;ll be more than happy to guide you through the process.</p>
+
+                                    </div>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="w3ls_address_mail_footer_grids">
+                            <div class="col-md-4 w3ls_footer_grid_left">
+                                <div class="wthree_footer_grid_left">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <p>3481 Melrose Place, Beverly Hills, <span>New York City 90210.</span></p>
+                            </div>
+                            <div class="col-md-4 w3ls_footer_grid_left">
+                                <div class="wthree_footer_grid_left">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <p>+(000) 123 4565 32 <span>+(010) 123 4565 35</span></p>
+                            </div>
+                            <div class="col-md-4 w3ls_footer_grid_left">
+                                <div class="wthree_footer_grid_left">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                </div>
+                                <p>
+                                    <a href="mailto:info@example.com">info@harshjadhav.com</a>
+                                    <span><a href="mailto:info@example.com">info@deepshah.com</a></span>
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <script type="text/javascript">
+    if (typeof Translator !== 'object' && typeof Translate == 'object') {
+        var Translator = new Translate([]);
+    }
+
+    if (typeof Translator === 'object') {
+        Translator.add({
+            "We were unable to complete the request. Please try again.": "We were unable to complete the request. Please try again.",
+            "Checkout with PayPal": "Checkout with PayPal"
+        })
+    }
+
+    function PayPalExpressSetup() {
+            var express = new BraintreePayPalExpress(
+                false,
+                'PartCatalog.com',
+                'LLFUN42Rrlv5b49k',
+                'cart',
+                {
+                    clientTokenUrl: 'https://www.partcatalog.com/braintree/checkout/clientToken/',
+                    authUrl:        'https://www.partcatalog.com/braintree/express/authorization/',
+                    shippingSaveUrl:'https://www.partcatalog.com/braintree/express/saveShipping/',
+                    couponSaveUrl:  'https://www.partcatalog.com/braintree/express/saveCoupon/',
+                    successUrl:     'https://www.partcatalog.com/checkout/onepage/success/',
+                },
+                {
+                    locale:         'en_us',
+                    token:          'eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZDU0OGRlNWFlZjllOTg2NGZjNGJjMmMwZDQ5ODg4YTgxNzJmOTRlNzRkYTAyNjIwZjYwZmI2Nzk0ZTdlMDI1fGNyZWF0ZWRfYXQ9MjAxOS0wNC0wMlQxNjowNToxNC4xNzA3Njk2NDQrMDAwMFx1MDAyNm1lcmNoYW50X2FjY291bnRfaWQ9UGFydENhdGFsb2djb21faW5zdGFudFx1MDAyNm1lcmNoYW50X2lkPXkzOTNwY2Rnajd4azN5aGpcdTAwMjZwdWJsaWNfa2V5PW45N216cHEycmJ4NmhzZGIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzL3kzOTNwY2Rnajd4azN5aGovY2xpZW50X2FwaS92MS9jb25maWd1cmF0aW9uIiwiZ3JhcGhRTCI6eyJ1cmwiOiJodHRwczovL3BheW1lbnRzLmJyYWludHJlZS1hcGkuY29tL2dyYXBocWwiLCJkYXRlIjoiMjAxOC0wNS0wOCJ9LCJjaGFsbGVuZ2VzIjpbImN2diIsInBvc3RhbF9jb2RlIl0sImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsImNsaWVudEFwaVVybCI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMveTM5M3BjZGdqN3hrM3loai9jbGllbnRfYXBpIiwiYXNzZXRzVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhdXRoVXJsIjoiaHR0cHM6Ly9hdXRoLnZlbm1vLmNvbSIsImFuYWx5dGljcyI6eyJ1cmwiOiJodHRwczovL2NsaWVudC1hbmFseXRpY3MuYnJhaW50cmVlZ2F0ZXdheS5jb20veTM5M3BjZGdqN3hrM3loaiJ9LCJ0aHJlZURTZWN1cmVFbmFibGVkIjpmYWxzZSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiUGFydENhdGFsb2cuY29tIiwiY2xpZW50SWQiOiJBYUR3UGNvTWZtZDh5djRRWFpWVnA1OTNnVVY2NlFmVU56bTJfNTV1ZTJYWW5ncXpTU0Q3b3hHUVNCUHZOWThzTFhCWWtVYkxSUEo0MVZxViIsInByaXZhY3lVcmwiOiJodHRwOi8vd3d3LnBhcnRjYXRhbG9nLmNvbS9wcml2YWN5LXBvbGljeSIsInVzZXJBZ3JlZW1lbnRVcmwiOiJodHRwOi8vd3d3LnBhcnRjYXRhbG9nLmNvbS90ZXJtcy1hbmQtY29uZGl0aW9ucyIsImJhc2VVcmwiOiJodHRwczovL2Fzc2V0cy5icmFpbnRyZWVnYXRld2F5LmNvbSIsImFzc2V0c1VybCI6Imh0dHBzOi8vY2hlY2tvdXQucGF5cGFsLmNvbSIsImRpcmVjdEJhc2VVcmwiOm51bGwsImFsbG93SHR0cCI6ZmFsc2UsImVudmlyb25tZW50Tm9OZXR3b3JrIjpmYWxzZSwiZW52aXJvbm1lbnQiOiJsaXZlIiwidW52ZXR0ZWRNZXJjaGFudCI6ZmFsc2UsImJyYWludHJlZUNsaWVudElkIjoiQVJLcllSRGgzQUdYRHpXN3NPXzNiU2txLVUxQzdIR191V05DLXo1N0xqWVNETlVPU2FPdElhOXE2VnBXIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6IlBhcnRDYXRhbG9nY29tX2luc3RhbnQiLCJjdXJyZW5jeUlzb0NvZGUiOiJVU0QifSwibWVyY2hhbnRJZCI6InkzOTNwY2Rnajd4azN5aGoiLCJ2ZW5tbyI6Im9mZiIsImJyYWludHJlZV9hcGkiOnsidXJsIjoiaHR0cHM6Ly9wYXltZW50cy5icmFpbnRyZWUtYXBpLmNvbSIsImFjY2Vzc190b2tlbiI6InByb2R1Y3Rpb25fczduZDR2X3MzZzZ3OF9rbWs5ODVfamh3dzl6XzI2eSJ9LCJtZXJjaGFudEFjY291bnRJZCI6IlBhcnRDYXRhbG9nY29tX2luc3RhbnQifQ==',
+                    singleUse:      true                }
+            );
+            express.attachToButtons($$('[data-paypalexpress]'));
+
+            // Expose the ppExpress object to the window for backwards compatibility
+            window.ppExpress = express;
+    }
+
+    jQuery(document).ready(function($) {
+    	PayPalExpressSetup();
+    });
+                        </script>
+                    </div>
+                    <script type="text/javascript">
+
+
+    var magalterDropDown = {};
+
+ document.observe("dom:loaded", function() {
+
+     if(!Object.isElement($$('.top-link-cart')[0]                )) {
+         if(typeof(window.console) == 'object') {
+              return window.console.log('Locator element is not found. Please check configuration');
+         }
+     }
+
+    if ($$('.top-link-cart')[0]                 && $('cartdropdown')) {
+        $$('.top-link-cart')[0]                .onclick = function() {/* return false */}
+        $$('.top-link-cart')[0]                .addClassName('magalter-top-link-cart').removeAttribute('title');
+        var offsets1554221114973072185 = new magalterOffsets({element: $('cartdropdown'), relative: $$('.top-link-cart')[0]                });
+        offsets1554221114973072185.horizontal = 235;
+        offsets1554221114973072185.vertical = 13;
+        offsets1554221114973072185.align();
+        var effect1554221114973072185 = new magalterEffect([{trigger: 'magalter-top-link-cart', element: 'cartdropdown'}], {before: function() { if(typeof(magalterFL) == 'object') {magalterFL.getClass().hideAllExcept(false)}}});
+        effect1554221114973072185.interactive = 1;
+        effect1554221114973072185.effect = 1;
+        effect1554221114973072185.effectDuration = 0.3;
+        //effect1554221114973072185.interact();
+
+        magalterDropDown.effect = effect1554221114973072185;
+
+        if(typeof(magalterAjaxcartEvents) == 'object') {
+            magalterAjaxcartEvents.attachEventHandler('magalter_cartdropdown', function() {
+                $$('.top-link-cart')[0]                .onclick = function() { /*return false*/ }
+                $$('.top-link-cart')[0]                .addClassName('magalter-top-link-cart').removeAttribute('title');
+            });
+        }
+
+    }
+});
+
+                    </script>
+
+
+                    <!-- Anaraky GDRT v.1.0.9 script begin -->
+                    <script type="text/javascript">
+/* <![CDATA[ */
+var google_tag_params = {
+	ecomm_pagetype: "siteview"
+};
+var google_conversion_id = 1008234431;
+var google_conversion_label = "U7yLCPny4gcQv9_h4AM";
+var google_custom_params = google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+                    </script>
+                    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+                    </script>
+                    <noscript>
+                        <div style="display:inline;">
+                            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1008234431/?value=0&amp;label=U7yLCPny4gcQv9_h4AM&amp;guid=ON&amp;script=0&amp;data=ecomm_pagetype%3Dsiteview" />
+                        </div>
+                    </noscript>
+                    <!-- Anaraky GDRT script end -->
+                    <script type="text/javascript" src="https://cdn.partcatalog.com/media/js/966bb4f9225d81ff7c24dca6694e81eb.js" data-group="footer"></script>
+                    <script type="text/javascript" src="https://cdn.partcatalog.com/media/js/ca0eedca0feef34d95ceb0622bbfccd0.js" data-group="prod"></script>
+                    <!--[if lt IE 7]>
+                    <script type="text/javascript" src="https://cdn.partcatalog.com/media/js/4ee2fa1158619966b38e7a47703923f6.js"></script>
+                    <![endif]-->
+                    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fff06859fa","applicationID":"287987428","transactionName":"YQFTMUBWWUNWUEQKCVhLcAZGXlheGFBdEElGBVYAHUFeVUA=","queueTime":0,"applicationTime":469,"atts":"TUZQRwhMSk0=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body>
+</html>

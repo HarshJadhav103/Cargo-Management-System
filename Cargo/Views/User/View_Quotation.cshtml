@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Cargo.Models.User_Cargo>
+
+@{
+    ViewBag.Title = "View_Quotation`";
+    Layout = "~/Views/User/Inner_LayoutPage.cshtml";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CargoId)*@
+            Company Name
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.RequestId)*@
+            RequestId
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Description)*@
+            Quotation
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Date)*@
+            Date
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Time)*@
+            Time
+        </th>
+        <th> Status</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+
+        <td>
+            @Html.ActionLink("Approved", "Approved", new { id = item.QuotationId }) 
+
+        </td>
+        
+
+
+
+    </tr>
+}
+
+</table>

@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+
+@{
+    var lat1 = ViewBag.lat;
+    var long1 = ViewBag.lng;
+}
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+   
+    <div id="map" style="width:50%;height:250px;"></div>
+
+
+
+
+    <script>
+function myMap() {
+            var mapCanvas = document.getElementById("map");
+            var myCenter = new google.maps.LatLng(@lat1,@long1);
+            var mapOptions = {center: myCenter, zoom: 15};
+        var map = new google.maps.Map(mapCanvas,mapOptions);
+        var marker = new google.maps.Marker({
+    position: myCenter,
+          animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+    </script>
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNPBMG9rqX7p5LZb1iZ0n0RUUNUu4Se4k&callback=myMap"></script>
+    <!--
+    To use this code on your website, get a free API key from Google.
+    Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+    -->
+
+</body>
+</html>
